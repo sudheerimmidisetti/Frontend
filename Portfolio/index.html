@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudheer's - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <nav class="navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sudheer Immidisetti</a>
+            <button class="navbar-toggler" id="navbar-toggler" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="navbar-links" id="navbar-links">
+                <ul class="navbar-menu">
+                    <li><a class="nav-link" href="#home">Home</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#skills">Skills</a></li>
+                    <li><a class="nav-link" href="#projects">Projects</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="container hero-content">
+            <h1 id="line1"></h1>
+            <p id="line2" class="hero-lead"></p>
+            <p id="line3" class="hero-subtext"></p>
+            <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-4 about-image-wrapper">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQGu_7VGrB2p2g/profile-displayphoto-scale_400_400/B4DZlbccmNJEAg-/0/1758175816848?e=1761177600&v=beta&t=cOBDtTYImhLLqyCzV7yOz2YHf7RHYO1tA5YCt-CXtbg" class="profile-img">
+                </div>
+                <div class="col-md-8">
+                    <h3>Who I Am</h3>
+                    <p>Hello! I'm a passionate and driven Frontend developer with a knack for creating efficient and scalable web applications. My journey in technology started with a deep curiosity for how things work, and it has evolved into a career where I can build, innovate, and solve complex problems.</p>
+                    <h4>Education</h4>
+                    <p><strong>Bachelor of Technology in Computer Science and Engineering</strong><br>Aditya College of Engineering and Technology, 2023 - 2027</p>
+                    <a href="assets/resume.pdf" class="btn btn-outline-primary" download>
+                        <i class="fas fa-download"></i>Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card skill-card">
+                        <i class="fas fa-code card-icon text-primary"></i>
+                        <h5>Languages</h5>
+                        <p>C, C++, Python, Java, SQL, JavaScript</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card skill-card">
+                        <i class="fas fa-layer-group card-icon text-primary"></i>
+                        <h5>Frameworks & Libraries</h5>
+                        <p>Bootstrap</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card skill-card">
+                        <i class="fas fa-tools card-icon text-primary"></i>
+                        <h5>Tools & Platforms</h5>
+                        <p>Git, Linux</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card">
+                        <img src="https://www.shutterstock.com/image-photo/your-health-matters-concept-260nw-2636906533.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">KYH (Know Your Health)</h5>
+                            <p class="card-text">Developed a health guidance system that offers disease prediction and health tips based on user input.</p>
+                            <a href="https://github.com/GangadharPrathap/KYH/" class="btn btn-primary"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="btn btn-secondary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card">
+                        <img src="https://github.com/GangadharPrathap/LEVELER--AI/blob/main/leveler%20ai%20logo.PNG?raw=true" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Leveler AI</h5>
+                            <p class="card-text">An AI-powered tool designed to streamline complex data analysis and provide actionable insights.</p>
+                            <a href="https://github.com/GangadharPrathap/LEVELER--AI/" class="btn btn-primary"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://gangadharprathap.github.io/LEVELER--AI/" class="btn btn-secondary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-input" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-input" id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full-width">Send Message</button>
+                    </form>
+                    <div class="social-links">
+                        <p>Or reach me at:</p>
+                        <a href="mailto:sudheerimmidisetti@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/sudheer-immidisetti-619323291/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/sudheerimmidisetti"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sudheer Immidisetti. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
