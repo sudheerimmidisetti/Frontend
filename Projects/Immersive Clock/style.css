@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', monospace;
+}
+
+.clock-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.digit-column {
+  position: relative;
+  width: 40px;
+  height: 60px;
+  overflow: hidden;
+  background: #222;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+}
+
+.digit-column::before,
+.digit-column::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 20%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.digit-column::before {
+  top: 0;
+  background: linear-gradient(to bottom, #111, transparent);
+}
+
+.digit-column::after {
+  bottom: 0;
+  background: linear-gradient(to top, #111, transparent);
+}
+
+.digit-strip {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease-in-out;
+}
+
+.digit {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0f0;
+  font-size: 2rem;
+  text-shadow: 0 0 5px #0f0;
+}
+
+.separator {
+  color: #0f0;
+  font-size: 2.5rem;
+  text-shadow: 0 0 5px #0f0;
+}

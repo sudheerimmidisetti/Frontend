@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>24-Hour Scrolling Clock</title>
+        <style>
+            /* * {
+                box-sizing: border-box;
+            } */
+
+            body {
+                margin: 0;
+                height: 150svh;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: monospace;
+                background: linear-gradient(-45deg, #1e1e2f, #3a3a60, #1e1e2f, #2a2a4f);
+                background-size: 400% 400%;
+                animation: backgroundShift 15s ease infinite;
+            }
+
+            @keyframes backgroundShift {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+
+            .clock {
+                display: flex;
+                gap: 15px;
+            }
+
+            .digit-container {
+                width: 35px;
+                height: auto;
+                border-radius: 12px;
+                background: rgba(0, 0, 0, 0.7);
+                box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            #h1 {
+                height: 120px;
+                overflow: hidden;
+            }
+
+            #m1 {
+                height: 240px;
+                overflow: hidden;
+            }
+
+            #s1 {
+                height: 240px;
+                overflow: hidden;
+            }
+
+            .digit {
+                position: relative;
+                /* height: 40px; */
+                line-height: 40px;
+                text-align: center;
+                font-size: 1rem;
+                color: #00ffcc;
+                text-shadow: 0 0 10px #00ffff;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .digit.current::before {
+                content: '';
+                width: 25px;
+                height: 25px;
+                background: transparent;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 10px #00ffcc;
+            }
+
+            .digit.current:hover {
+                /* transform: scale(1.2); */
+                box-shadow: 0 0 15px #00ffff;
+                border-radius: 8px;
+                background-color: rgba(0, 255, 255, 0.1);
+                cursor: pointer;
+            }
+
+            .separator {
+                font-size: 2.5rem;
+                color: #00ffcc;
+                text-shadow: 0 0 10px #00ffff;
+                padding: 0 10px;
+                line-height: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="clock">
+            <div class="digit-container" id="h1"></div>
+            <div class="digit-container" id="h2"></div>
+            <div class="separator">:</div>
+            <div class="digit-container" id="m1"></div>
+            <div class="digit-container" id="m2"></div>
+            <div class="separator">:</div>
+            <div class="digit-container" id="s1"></div>
+            <div class="digit-container" id="s2"></div>
+        </div>
+
+        <script>
+            const ids = ['h1', 'h2', 'm1', 'm2', 's1', 's2'];
+
+            function createDigits(id) {
+                const container = document.getElementById(id);
+                const maxDigit = id === 'h1' ? 2 : 9;
+                for (let i = 0; i <= maxDigit; i++) {
+                    const digit = document.createElement('div');
+                    digit.className = 'digit';
+                    digit.textContent = i;
+                    container.appendChild(digit);
+                }
+            }
+
+            ids.forEach(createDigits);
+
+            function updateClock() {
+                const now = new Date();
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const seconds = now.getSeconds().toString().padStart(2, '0');
+                const timeStr = (hours + minutes + seconds).split('');
+
+                ids.forEach((id, index) => {
+                    const digit = parseInt(timeStr[index]);
+                    const container = document.getElementById(id);
+                    container.style.transform = `translateY(-${digit * 40}px)`;
+
+                    const digits = container.querySelectorAll('.digit');
+                    digits.forEach(d => d.classList.remove('current'));
+                    if (digits[digit]) {
+                        digits[digit].classList.add('current');
+                    }
+                });
+            }
+
+            updateClock();
+            setInterval(updateClock, 1000);
+        </script>
+    </body>
+</html>

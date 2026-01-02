@@ -1,0 +1,264 @@
+body {
+    background-color: black;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+}
+
+#bg-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.sun {
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    object-fit: cover;
+}
+
+.sun img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    box-shadow:
+        0 0 30px 15px rgba(255, 165, 0, 0.8),
+        0 0 500px 30px rgba(255, 69, 0, 0.6),
+        0 0 70px 45px rgba(255, 215, 0, 0.4);
+    filter: drop-shadow(0 0 40px #ffae00);
+}
+
+.orbit {
+    border: 4px solid rgba(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.planet-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    animation: orbit linear infinite;
+    z-index: 2;
+}
+
+.planet {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* .planet img {
+    width: 130px;
+    height: 70px;
+} */
+
+.mercury-wrapper .planet img {
+    width: 60px;
+    height: 40px;
+    opacity: 0.7;
+}
+
+.venus-wrapper .planet img {
+    width: 80px;
+    height: 40px;
+    opacity: 0.8;
+}
+
+.earth-wrapper .planet img {
+    width: 90px;
+    height: 50px;
+}
+
+.mars-wrapper .planet img {
+    width: 75px;
+    height: 38px;
+}
+
+.jupiter-wrapper .planet img {
+    width: 140px;
+    height: 90px;
+}
+
+.saturn-wrapper .planet img {
+    width: 130px;
+    height: 65px;
+}
+
+.uranus-wrapper .planet img {
+    width: 100px;
+    height: 50px;
+}
+
+.neptune-wrapper .planet img {
+    width: 100px;
+    height: 50px;
+}
+
+.mercury-orbit {
+    width: 220px;
+    height: 220px;
+}
+
+.venus-orbit {
+    width: 370px;
+    height: 370px;
+}
+
+.earth-orbit {
+    width: 520px;
+    height: 520px;
+}
+
+.mars-orbit {
+    width: 670px;
+    height: 670px;
+}
+
+.jupiter-orbit {
+    width: 820px;
+    height: 820px;
+}
+
+.saturn-orbit {
+    width: 970px;
+    height: 970px;
+}
+
+.uranus-orbit {
+    width: 1120px;
+    height: 1120px;
+}
+
+.neptune-orbit {
+    width: 1270px;
+    height: 1270px;
+}
+
+.mercury-wrapper {
+    width: 220px;
+    height: 220px;
+    margin: -110px 0 0 -110px;
+    animation-duration: 4s;
+}
+
+.venus-wrapper {
+    width: 370px;
+    height: 370px;
+    margin: -185px 0 0 -185px;
+    animation-duration: 7s;
+}
+
+.earth-wrapper {
+    width: 520px;
+    height: 520px;
+    margin: -260px 0 0 -260px;
+    animation-duration: 10s;
+}
+
+.mars-wrapper {
+    width: 670px;
+    height: 670px;
+    margin: -335px 0 0 -335px;
+    animation-duration: 15s;
+}
+
+.jupiter-wrapper {
+    width: 820px;
+    height: 820px;
+    margin: -410px 0 0 -410px;
+    animation-duration: 20s;
+}
+
+.saturn-wrapper {
+    width: 970px;
+    height: 970px;
+    margin: -485px 0 0 -485px;
+    animation-duration: 25s;
+}
+
+.uranus-wrapper {
+    width: 1120px;
+    height: 1120px;
+    margin: -560px 0 0 -560px;
+    animation-duration: 30s;
+}
+
+.neptune-wrapper {
+    width: 1270px;
+    height: 1270px;
+    margin: -635px 0 0 -635px;
+    animation-duration: 35s;
+}
+
+@keyframes orbit {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.moon-orbit {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid rgba(255, 255, 255);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.moon-wrapper {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moonOrbit 3s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+.moon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.moon img {
+    width: 28px !important;
+    height: 20px !important;
+    opacity: 0.9;
+}
+
+@keyframes moonOrbit {
+    100% {
+        transform: rotate(360deg);
+    }
+}

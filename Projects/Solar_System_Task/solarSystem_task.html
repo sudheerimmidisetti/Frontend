@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar System Animation</title>
+    
+    <link rel="stylesheet" href="solarSystem_task.css">
+</head>
+
+<body>
+    <div class="main">
+        <video autoplay muted loop id="bg-video">
+        <source src="./solarSystem_img/solarSystem_bgVd2.mp4" type="video/mp4">
+        </video>
+
+        <div class="sun">
+        <img src="./solarSystem_img/sun.png" alt="Sun">
+        </div>
+
+        <!-- Mercury -->
+        <div class="orbit mercury-orbit"></div>
+        <div class="planet-wrapper mercury-wrapper">
+        <div class="planet">
+            <img src="./solarSystem_img/mars.png" alt="Mercury">
+        </div>
+        </div>
+
+        <!-- Venus -->
+        <div class="orbit venus-orbit"></div>
+        <div class="planet-wrapper venus-wrapper">
+        <div class="planet">
+            <img src="./solarSystem_img/venus.png" alt="Venus">
+        </div>
+        </div>
+
+        <!-- Earth -->
+        <div class="orbit earth-orbit"></div>
+        <div class="planet-wrapper earth-wrapper">
+        <div class="planet">
+            <img src="./solarSystem_img/earth.png" alt="Earth">
+
+            <div class="moon-orbit">
+                <div class="moon-wrapper">
+                    <div class="planet moon">
+                        <img src="./solarSystem_img/moon.png" alt="Moon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Mars -->
+        <div class="orbit mars-orbit"></div>
+        <div class="planet-wrapper mars-wrapper">
+        <div class="planet">
+            <img src="./solarSystem_img/mars.png" alt="Mars">
+        </div>
+        </div>
+
+        <!-- Jupiter -->
+        <div class="orbit jupiter-orbit"></div>
+        <div class="planet-wrapper jupiter-wrapper">
+        <div class="planet">
+            <img src="./solarSystem_img/jupiter.png" alt="Jupiter">
+        </div>
+        </div>
+
+        <!-- Saturn -->
+        <div class="orbit saturn-orbit"></div>
+        <div class="planet-wrapper saturn-wrapper">
+        <div class="planet">
+            <img src="./solarSystem_img/saturn.png" alt="Saturn">
+        </div>
+        </div>
+
+        <!-- Uranus -->
+        <div class="orbit uranus-orbit"></div>
+        <div class="planet-wrapper uranus-wrapper">
+        <div class="planet">
+            <img src="./solarSystem_img/uranus.png" alt="Uranus">
+        </div>
+        </div>
+
+        <!-- Neptune -->
+        <div class="orbit neptune-orbit"></div>
+        <div class="planet-wrapper neptune-wrapper">
+        <div class="planet">
+            <img src="./solarSystem_img/neptune.png" alt="Neptune">
+        </div>
+        </div>
+    </div>
+</body>
+</html>

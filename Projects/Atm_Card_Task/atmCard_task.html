@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ATM Card Task</title>
+
+        <style>
+          body {
+              background: rgb(255, 255, 255);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 90vh;
+          }
+
+          .card {
+              width: 400px;
+              height: 250px;
+              border-radius: 20px;
+              background: 
+                  radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px),
+                  linear-gradient(to right, rgb(192, 192, 192), #999999);
+              background-size: 6px 6px, cover;
+              position: relative;
+              overflow: hidden;
+              box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+          }
+
+          .curve1{
+              position: absolute;
+              top: -100px;
+              left: 220px;
+              
+              border: 3px solid rgba(255,255,255,0.3);
+              border-radius: 50%;
+
+              width: 600px;
+              height: 600px;
+          }
+
+          .shadow-circle {
+              position: absolute;
+              width: 500px;
+              height: 500px;
+              top: 15px;
+              left: -50px;
+              background: radial-gradient(circle at top, rgba(0, 0, 0, 0.05), transparent 100%);
+              border-radius: 50%;
+              z-index: 0;
+          }
+
+          .platinum{
+              font-size: 40px;
+              color: rgb(243, 235, 235);
+
+              position: relative;
+              top: 15px;
+              left: 25px;
+          }
+
+          .chip{
+              position: absolute;
+              top: 70px;
+              left: 60px;
+          }
+
+          img{
+              width: 60px;
+              height: 60px;
+          }
+
+          .debit{
+              position: relative;
+              top: -30px;
+              left: 240px;
+
+              font-size: 30px;
+              font-weight: bold;
+              color: rgb(243, 235, 235);
+          }
+
+          .wifi{
+              position: relative;
+              top: -25px;
+              right: -320px;
+              background: transparent;
+          }
+
+          .details{
+              position: relative;
+          }
+
+          .id{
+              position: relative;
+              top: 40px;
+              left: 15px;
+
+              font-size: 22px;
+              font-weight: bold;
+              color: rgb(243, 235, 235);
+          }
+
+          .validity{
+              position: relative;
+              top: 40px;
+              left: 15px;
+
+              font-size: 10px;
+              font-weight: bold;
+              color: rgb(243, 235, 235);
+          }
+
+          .cardHolder{
+              position: relative;
+              top: 40px;
+              left: 15px;
+
+              font-size: 20px;
+              font-weight: bold;
+              color: rgb(243, 235, 235);
+          }
+
+          .circle {
+              width: 50px;
+              height: 50px;
+              background-color: rgba(255, 0, 0, 0.707);
+              border-radius: 50%;
+              position: absolute;
+              top: 70px;
+              left: 280px;
+          }
+
+          .circle2 {
+              width: 50px;
+              height: 50px;
+              background-color: rgba(255, 166, 0, 0.688);
+              border-radius: 50%;
+              position: absolute;
+              top: 70px;
+              left: 310px;
+          }
+        </style>
+
+        <link rel="stylesheet" href="atmCard_task.css">
+    </head>
+    <body>
+      <div class="card">
+        <div class="curve1"></div>
+        <div class="shadow-circle"></div>
+        <div class="platinum">platinum</div>
+        <div class="chip">
+            <img src="./chip.png" alt="Image crashed">
+            <div class="debit">debit</div>
+        </div>
+        <div class="wifi">
+            <img src="./wifi.png" alt="images crashed">
+        </div>
+        <div class="details">
+            <div class="id">
+                <div>1234 **** **** 5678</div>
+            </div>
+            <div class="validity">
+                <div>VALID THRU</div>
+                <div style="font-size: 25px;">12/27</div>
+            </div>
+            <div class="cardHolder">Immidisetti Sudheer</div>
+            <div class="circle"></div>
+            <div class="circle2"></div>
+        </div>
+      </div>
+    </body>
+</html>
