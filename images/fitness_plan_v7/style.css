@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+body { background: #f7f7f7; color: #333; line-height: 1.6; }
+header { background: #1e90ff; padding: 15px; text-align: center; color: white; font-size: 1.8em; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.container { max-width: 900px; margin: 20px auto; padding: 20px; }
+.level-box {
+  background: white; padding: 25px; margin: 15px 0; border-radius: 10px;
+  text-align: center; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.level-box:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+.days-container { display: flex; justify-content: space-between; margin-top: 15px; flex-wrap: wrap; }
+.day-box {
+  flex: 1; margin: 5px; text-align: center; background: white; padding: 10px;
+  border-radius: 8px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: background 0.3s;
+}
+.day-box:hover { background: #e6f3ff; }
+.workout-card { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.workout-card h3 { color: #1e40af; margin-bottom: 10px; }
+.exercise { margin-bottom: 20px; }
+.exercise img { width: 100%; border-radius: 8px; margin-bottom: 10px; }
+.exercise-text { padding-left: 20px; list-style-type: disc; }
+.btn-back {
+  display: inline-block; margin-top: 20px; padding: 10px 20px;
+  background: #1e90ff; color: white; border: none; border-radius: 5px;
+  cursor: pointer; transition: background 0.3s;
+}
+.btn-back:hover { background: #0066cc; }
+@media (max-width: 600px) { .days-container { flex-direction: column; } }

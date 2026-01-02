@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #1e90ff;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-size: 1.8em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.level-box {
+  background: white;
+  padding: 25px;
+  margin: 15px 0;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.level-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.day-box {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+}
+.day-box:hover {
+  background: #e6f3ff;
+}
+
+.workout-card {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.workout-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.workout-card h3 {
+  color: #1e40af;
+  margin-bottom: 10px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.step-number {
+  background: #1e40af;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.btn-back {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-back:hover {
+  background: #0066cc;
+}
+
+.progress-checkbox {
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .container { padding: 10px; }
+  .level-box { padding: 20px; }
+}
